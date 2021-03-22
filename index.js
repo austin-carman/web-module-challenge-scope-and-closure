@@ -166,16 +166,16 @@ function scoreboard(getInningScoreCb, inningCb, numI) {
   let home = 0;
   let away = 0;
   for(let i=0; i < numI; i++){
-    let inningScores = getInningScoreCb(inningCb());
+    let inningScores = getInningScoreCb(inningCb);
     home += inningScores.Home;
     away += inningScores.Away;
     score.push(`Inning ${i+1}: Away ${inningScores.Away} - Home: ${inningScores.Home}`);
   }
   if(home === away){
-    score.push(`This game will require extra innings: ${inningScores.Away} - Home: ${inningScores.home}`)
+    score.push(`This game will require extra innings: ${away} - Home: ${home}`)
     return score;
   }else{
-    score.push(`Final Score: ${inningScores.away} - ${inningScores.home}`)
+    score.push(`Final Score: ${away} - ${home}`)
     return score;
   }
 }
