@@ -43,6 +43,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+closure is a function nested inside another function. The Child function has access to variables of the parent function but not vis versa.
+
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -64,8 +67,13 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+the closure is personalDice which is the inner function stored in the dansRoll - this is done at line 60 when personalDice becomes nested in the dansRoll function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+The name printed to the console will be Dan in both but the newRoll could be different since it's going to be a random number generated.
+
 c. What is the lexical scope of `newRoll`? 
+the inner function has access to the variables of the parent function - in this case, it has access to the "name" parameter/"Dan" argument. 
 
 
 ### Task 3 - Stretch Goals
