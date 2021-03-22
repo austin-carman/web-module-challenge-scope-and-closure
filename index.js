@@ -172,16 +172,14 @@ function scoreboard(getInningScoreCb, inningCb, numI) {
     score.push(`Inning ${i+1}: Away ${inningScores.Away} - Home: ${inningScores.Home}`);
   }
   if(home === away){
-    score.push(`This game will require extra innings: ${away} - Home: ${home}`)
+    score.push(`This game will require extra innings: Away ${away} - Home ${home}`)
     return score;
   }else{
-    score.push(`Final Score: ${away} - ${home}`)
+    score.push(`Final Score: Away ${away} - Home ${home}`)
     return score;
   }
 }
 console.log('task5:', scoreboard(getInningScore, inning, 9));
-
-
 
 
 
